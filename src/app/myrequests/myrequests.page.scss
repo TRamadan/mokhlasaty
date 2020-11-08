@@ -1,0 +1,28 @@
+.card-header {
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: system-ui;
+  color: red;
+}
+
+.title {
+  border-bottom: 1px dotted;
+  margin-top: -30px;
+}
+
+.state {
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: system-ui;
+  margin-top: -5px;
+}
+
+.rotate {
+  transform: rotateY(0deg);
+}
+
+.icon-color {
+  color: goldenrod;
+}

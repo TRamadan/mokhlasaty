@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>الخدمات الجامعية</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="../../assets/icon/favicon.png" />
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-list lines="none">
+          <ion-item>
+            <ion-label class="label">نوع الخدمة</ion-label>
+            <ion-select interface="popover">
+              <ion-select-option value="brown">Brown</ion-select-option>
+              <ion-select-option value="blonde">Blonde</ion-select-option>
+              <ion-select-option value="black">Black</ion-select-option>
+              <ion-select-option value="red">Red</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <ion-list lines="none">
+          <ion-item>
+            <ion-label class="label">الخدمة</ion-label>
+            <ion-select interface="popover">
+              <ion-select-option value="brown">Brown</ion-select-option>
+              <ion-select-option value="blonde">Blonde</ion-select-option>
+              <ion-select-option value="black">Black</ion-select-option>
+              <ion-select-option value="red">Red</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <ion-list lines="none">
+          <ion-item>
+            <ion-label class="label" position="floating">التفاصيل</ion-label>
+            <ion-textarea placeholder="برجاء كتابة التفاصيل ..."></ion-textarea>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <section>
+          <ion-button (click)="SendRequest()" color="danger" expand="block"
+            >اضافة الطلب</ion-button
+          >
+        </section>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

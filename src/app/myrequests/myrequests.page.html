@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="end" class="rotate">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>طلباتي</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" *ngFor="let r of Requests">
+        <ion-card (click)="gotopayment()">
+          <ion-card-header class="card-header">
+            <div class="title">
+              <h5>{{r.title}}</h5>
+              <h5 style="margin-top: -5px">{{r.type}}</h5>
+            </div>
+          </ion-card-header>
+          <ion-card-content>
+            <div>
+              <h5 class="state">
+                <ion-icon
+                  class="icon-color"
+                  name="checkmark-circle-outline"
+                ></ion-icon>
+
+                الحالة : {{r.period}}
+              </h5>
+              <h5 class="state" style="margin-top: 18px !important">
+                <ion-icon
+                  class="icon-color"
+                  slot="start"
+                  name="cash"
+                ></ion-icon>
+                التكلفة : {{r.cost}}
+              </h5>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

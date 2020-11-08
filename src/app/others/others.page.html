@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>خدمات اخري</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <form>
+      <ion-row>
+        <ion-col size="12">
+          <ion-item style="width: 144%">
+            <ion-label class="labl" position="floating"
+              >الخدمة المطلوبة</ion-label
+            >
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="12">
+          <ion-item style="width: 144%">
+            <ion-label class="labl" position="floating"
+              >تفاصيل الخدمة المطلوبة</ion-label
+            >
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="12">
+          <ion-item style="width: 144%">
+            <ion-label class="labl" position="floating"
+              >الجهات التي سيتمم التعامل بها</ion-label
+            >
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="12"> </ion-col>
+
+        <ion-col size="12">
+          <section>
+            <ion-button (click)="SendRequest()" color="danger" expand="block"
+              >اضافة الطلب</ion-button
+            >
+          </section>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-grid>
+</ion-content>
