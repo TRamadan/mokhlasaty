@@ -66,8 +66,8 @@ export class MyrequestsPage implements OnInit {
 
   ngOnInit() {}
 
-  gotopayment() {
+  gotodetails() {
     // this.router.navigateByUrl("/payment");
-    this.navCtrl.navigateForward("/payment");
+    this.navCtrl.navigateForward("/requestdetails");
   }
 }

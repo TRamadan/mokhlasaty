@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="danger">
-    <ion-title></ion-title>
+    <ion-title>الرئيسية</ion-title>
     <ion-buttons slot="start">
       <ion-menu-button autoHide="false"></ion-menu-button>
     </ion-buttons>
@@ -8,121 +8,77 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-grid>
+  <ion-grid class="grid">
     <ion-row>
       <ion-col size="6">
-        <ion-card class="card-style">
+        <ion-card
+          text-center
+          padding
+          style="height: 99%; width: 99%"
+          (click)="gotorequestdetails()"
+        >
+          <fa-icon icon="hands-helping"></fa-icon>
           <ion-card-content>
-            <ion-card-header>
-              <img src="../../assets/icon/favicon.png" />
-            </ion-card-header>
-
             <div>
-              <h5>الخدمات الجامعية</h5>
+              <h5 style="text-align: center; font-weight: bold; color: #000">
+                طلب الخدمة
+              </h5>
             </div>
           </ion-card-content>
         </ion-card>
       </ion-col>
 
       <ion-col size="6">
-        <ion-card class="card-style">
+        <ion-card
+          text-center
+          padding
+          style="height: 99%; width: 99%"
+          (click)="gotoservices()"
+        >
+          <fa-icon icon="cogs"></fa-icon>
           <ion-card-content>
-            <ion-card-header>
-              <img src="../../assets/icon/favicon.png" />
-            </ion-card-header>
-
             <div>
-              <h5>الخدمات الجامعية</h5>
+              <h5 style="text-align: center; font-weight: bold; color: #000">
+                خدماتي
+              </h5>
             </div>
           </ion-card-content>
         </ion-card>
       </ion-col>
     </ion-row>
 
-    <ion-row>
+    <ion-row style="margin-top: 16px">
       <ion-col size="6">
-        <ion-card class="card-style">
+        <ion-card
+          text-center
+          padding
+          style="height: 99%; width: 99%"
+          (click)="gotonotifications()"
+        >
+          <fa-icon icon="bell"></fa-icon>
           <ion-card-content>
-            <ion-card-header>
-              <img src="../../assets/icon/favicon.png" />
-            </ion-card-header>
-
             <div>
-              <h5>الخدمات الجامعية</h5>
+              <h5 style="text-align: center; font-weight: bold; color: #000">
+                اشعارات
+              </h5>
             </div>
           </ion-card-content>
         </ion-card>
       </ion-col>
 
       <ion-col size="6">
-        <ion-card class="card-style">
+        <ion-card
+          text-center
+          padding
+          style="height: 99%; width: 99%"
+          (click)="gotochats()"
+        >
+          <fa-icon icon="comment-dots"></fa-icon>
           <ion-card-content>
-            <ion-card-header>
-              <img src="../../assets/icon/favicon.png" />
-            </ion-card-header>
-
             <div>
-              <h5>الخدمات الجامعية</h5>
-            </div>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col size="6">
-        <ion-card class="card-style">
-          <ion-card-content>
-            <ion-card-header>
-              <img src="../../assets/icon/favicon.png" />
-            </ion-card-header>
-
-            <div>
-              <h5>الخدمات الجامعية</h5>
-            </div>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-
-      <ion-col size="6">
-        <ion-card class="card-style">
-          <ion-card-content>
-            <ion-card-header>
-              <img src="../../assets/icon/favicon.png" />
-            </ion-card-header>
-
-            <div>
-              <h5>الخدمات الجامعية</h5>
-            </div>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col size="6">
-        <ion-card class="card-style">
-          <ion-card-content>
-            <ion-card-header>
-              <img src="../../assets/icon/favicon.png" />
-            </ion-card-header>
-
-            <div>
-              <h5>الخدمات الجامعية</h5>
-            </div>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-
-      <ion-col size="6">
-        <ion-card class="card-style">
-          <ion-card-content>
-            <ion-card-header>
-              <img src="../../assets/icon/favicon.png" />
-            </ion-card-header>
-
-            <div>
-              <h5>الخدمات الجامعية</h5>
+              <h5 style="text-align: center; font-weight: bold; color: #000">
+                رسائل
+              </h5>
             </div>
           </ion-card-content>
         </ion-card>

@@ -55,4 +55,9 @@ export class AppComponent {
   vision() {
     this.router.navigateByUrl("/companyvision");
   }
+
+  gotocontactus()
+  {
+    this.router.navigateByUrl("/contactus");
+  }
 }

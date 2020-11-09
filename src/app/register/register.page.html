@@ -1,9 +1,94 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>register</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <form>
+    <ion-grid class="grid-style">
+      <ion-row>
+        <ion-item style="width: 100%">
+          <ion-label
+            style="font-family: system-ui; font-weight: bold"
+            position="floating"
+            >اسمك</ion-label
+          >
+          <ion-input
+            [(ngModel)]="firstName"
+            name="firstName"
+            type="text"
+          ></ion-input>
+        </ion-item>
+      </ion-row>
 
+      <ion-row>
+        <ion-item style="width: 100%">
+          <ion-label
+            style="font-family: system-ui; font-weight: bold"
+            position="floating"
+            >البريد الإلكتروني</ion-label
+          >
+          <ion-input [(ngModel)]="email" name="email" type="email"></ion-input>
+        </ion-item>
+      </ion-row>
+
+      <ion-row>
+        <ion-item style="width: 100%">
+          <ion-label
+            style="font-family: system-ui; font-weight: bold"
+            position="floating"
+            >كلمة المرور</ion-label
+          >
+          <ion-input
+            [(ngModel)]="password"
+            name="password"
+            type="password"
+          ></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-item style="width: 100%">
+          <ion-label
+            style="font-family: system-ui; font-weight: bold"
+            position="floating"
+            >تأكيد كلمة المرور</ion-label
+          >
+          <ion-input
+            [(ngModel)]="passwordConfirm"
+            name="confirmapassword"
+            type="password"
+          ></ion-input>
+        </ion-item>
+      </ion-row>
+
+      <ion-row>
+        <ion-item style="width: 100%">
+          <ion-label
+            style="font-family: system-ui; font-weight: bold"
+            position="floating"
+            >رقم التليفون</ion-label
+          >
+          <ion-input
+            [(ngModel)]="phone"
+            name="phone"
+            type="tel"
+            max
+          ></ion-input>
+        </ion-item>
+      </ion-row>
+
+      <section style="margin-top: 20px">
+        <ion-button color="danger" expand="block" (click)="onRegister()"
+          >إنشاء حساب</ion-button
+        >
+      </section>
+
+      <section>
+        <ion-button
+          style="font-weight: bolder"
+          fill="clear"
+          color="dark"
+          (click)="gotologin()"
+          expand="block"
+        >
+          لديك حساب بالفعل ؟ تسجيل الدخول
+        </ion-button>
+      </section>
+    </ion-grid>
+  </form>
 </ion-content>
