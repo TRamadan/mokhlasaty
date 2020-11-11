@@ -1,20 +1,22 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { FormsModule } from "@angular/forms";
 
-import { IonicModule } from '@ionic/angular';
+import { IonicModule } from "@ionic/angular";
+import { ReactiveFormsModule } from "@angular/forms";
 
-import { OthersPageRoutingModule } from './others-routing.module';
+import { OthersPageRoutingModule } from "./others-routing.module";
 
-import { OthersPage } from './others.page';
+import { OthersPage } from "./others.page";
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    OthersPageRoutingModule
+    ReactiveFormsModule,
+    OthersPageRoutingModule,
   ],
-  declarations: [OthersPage]
+  declarations: [OthersPage],
 })
 export class OthersPageModule {}

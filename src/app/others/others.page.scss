@@ -13,3 +13,33 @@ section:not(.full-width),
 .full-width > header {
   padding: 0 10px;
 }
+
+img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 10px;
+}
+
+.chk-styling {
+  margin-left: 10px;
+}
+
+.lbl {
+  font-family: system-ui;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.selectt {
+  color: #fff;
+  padding: 30px;
+  display: none;
+  margin-top: 30px;
+  width: 60%;
+  background: green;
+}
+
+label {
+  margin-right: 20px;
+}

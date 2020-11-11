@@ -5,6 +5,7 @@
 </ion-header>
 
 <ion-content>
+  <img src="../../assets/icon/favicon.png" />
   <ion-grid>
     <form>
       <ion-row>
@@ -35,7 +36,30 @@
           </ion-item>
         </ion-col>
 
-        <ion-col size="12"> </ion-col>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label class="lbl"
+              >هل تود إرسال المستند بعد الأنتهاء منه بالبريد السريع</ion-label
+            >
+            <ion-checkbox
+              class="chk-styling"
+              color="primary"
+              [(ngModel)]="checked"
+              name="checked"
+              slot="start"
+              (ionChange)="showaddress($event)"
+            ></ion-checkbox>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="12" *ngIf="ShowAddress">
+          <ion-item>
+            <ion-label class="labl" position="floating"
+              >اسم البلد التي تريد الارسال لها</ion-label
+            >
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-col>
 
         <ion-col size="12">
           <section>
