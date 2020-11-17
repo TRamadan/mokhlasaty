@@ -2,6 +2,7 @@ import { async } from "@angular/core/testing";
 import { Component, OnInit } from "@angular/core";
 import { AlertController, LoadingController } from "@ionic/angular";
 import { Router } from "@angular/router";
+import { FormGroup , Validators , FormBuilder } from "@angular/forms";
 
 @Component({
   selector: "app-shehadat",
@@ -9,13 +10,17 @@ import { Router } from "@angular/router";
   styleUrls: ["./shehadat.page.scss"],
 })
 export class ShehadatPage implements OnInit {
+  sendform : FormGroup;
   constructor(
     private router: Router,
     private loadingController: LoadingController,
-    private alertCtrl: AlertController
+    private alertCtrl: AlertController, 
+    private formbuilder : FormBuilder
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    
+  }
 
   async SendRequest() {
     console.log("this function is fired");

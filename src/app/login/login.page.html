@@ -1,67 +1,41 @@
-<ion-toolbar>
-  <img src="../assets/icon/favicon.png" />
+<ion-toolbar class="animate__animated animate__fadeInDown">
+  <img src="../../assets/icon/logo.jpeg" />
 </ion-toolbar>
 
 <ion-content>
+
   <form>
     <ion-grid class="ion-grid">
-      <ion-row>
+      <ion-row class="animate__animated animate__fadeInDown">
         <h5 class="title">تسجيل الدخول</h5>
       </ion-row>
-      <ion-row>
+      <ion-row class="animate__animated animate__fadeInDown">
         <ion-item style="width: 100%">
-          <ion-label
-            style="font-family: system-ui; font-weight: bold"
-            position="floating"
-            >البريد الإلكتروني</ion-label
-          >
+          <ion-label style="font-family: system-ui; font-weight: bold" position="floating">البريد الإلكتروني</ion-label>
           <ion-input [(ngModel)]="email" name="email" type="email"></ion-input>
         </ion-item>
       </ion-row>
-      <ion-row>
+      <ion-row class="animate__animated animate__fadeInDown">
         <ion-item style="width: 100%">
-          <ion-label
-            style="font-family: system-ui; font-weight: bold"
-            position="floating"
-            >كلمة السر</ion-label
-          >
-          <ion-input
-            [(ngModel)]="password"
-            name="password"
-            type="password"
-          ></ion-input>
+          <ion-label style="font-family: system-ui; font-weight: bold" position="floating">كلمة السر</ion-label>
+          <ion-input [(ngModel)]="password" name="password" type="password"></ion-input>
         </ion-item>
       </ion-row>
 
-      <section>
-        <ion-button color="danger" expand="block" (click)="gotohome()"
-          >تسجيل الدخول</ion-button
-        >
+      <section class="animate__animated animate__fadeInDown">
+        <ion-button color="danger" expand="block" (click)="gotohome()">تسجيل الدخول</ion-button>
       </section>
 
-      <section>
-        <ion-button
-          style="font-weight: bolder"
-          fill="clear"
-          color="dark"
-          (click)="gotoforgotpass()"
-          expand="block"
-        >
+      <section class="animate__animated animate__fadeInDown">
+        <ion-button style="font-weight: bolder" fill="clear" color="dark" (click)="gotoforgotpass()" expand="block">
           نسيت كلمة المرور ؟
         </ion-button>
       </section>
 
-      <section>
-        <ion-button
-          style="font-weight: bolder"
-          fill="clear"
-          color="dark"
-          routerLink="/register"
-          expand="block"
-          (click)="gotoregister()"
-        >
-          ليس لديك حساب ؟ انشاء حساب</ion-button
-        >
+      <section class="animate__animated animate__fadeInDown">
+        <ion-button style="font-weight: bolder" fill="clear" color="dark" routerLink="/register" expand="block"
+          (click)="gotoregister()">
+          ليس لديك حساب ؟ انشاء حساب</ion-button>
       </section>
     </ion-grid>
   </form>

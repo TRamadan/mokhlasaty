@@ -14,7 +14,7 @@ export class HomePage {
   }
 
   gotoservices() {
-    this.router.navigateByUrl("/");
+    this.router.navigateByUrl("/myrequests");
   }
 
   gotonotifications() {
