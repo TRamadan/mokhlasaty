@@ -1,14 +1,14 @@
 <ion-header>
   <ion-toolbar color="danger">
+    <ion-buttons slot="end">
+      <ion-back-button class="rotate"></ion-back-button>
+    </ion-buttons>
     <ion-title>الخدمات الجامعية</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <img
-    class="animate__animated animate__fadeInDown"
-    src="../../assets/icon/logo.jpeg"
-  />
+  <img class="animate__animated animate__fadeInDown" src="../../assets/icon/logo.jpeg" />
   <ion-grid>
     <form>
       <ion-row>
@@ -16,19 +16,11 @@
           <ion-list lines="none">
             <ion-item class="animate__animated animate__fadeInDown">
               <ion-label class="label">نوع الخدمة</ion-label>
-              <ion-select interface="popover">
-                <ion-select-option value="brown1"
-                  >استخراج نسخة</ion-select-option
-                >
-                <ion-select-option value="blonde1"
-                  >ظرف مغلق من الكلية</ion-select-option
-                >
-                <ion-select-option value="black1"
-                  >توثيق السفارة</ion-select-option
-                >
-                <ion-select-option value="red1"
-                  >شحن خارج البلاد</ion-select-option
-                >
+              <ion-select interface="popover" [(ngModel)]="status" name="status">
+                <ion-select-option value="brown1">استخراج نسخة</ion-select-option>
+                <ion-select-option value="blonde1">ظرف مغلق من الكلية</ion-select-option>
+                <ion-select-option value="black1">توثيق السفارة</ion-select-option>
+                <ion-select-option value="red1">شحن خارج البلاد</ion-select-option>
               </ion-select>
             </ion-item>
           </ion-list>
@@ -40,10 +32,8 @@
           <ion-list lines="none">
             <ion-item class="animate__animated animate__fadeInDown">
               <ion-label class="label">الخدمة</ion-label>
-              <ion-select interface="popover">
-                <ion-select-option value="brown"
-                  >شهادة جامعية</ion-select-option
-                >
+              <ion-select interface="popover" [(ngModel)]="status2" name="status2">
+                <ion-select-option value="brown">شهادة جامعية</ion-select-option>
                 <ion-select-option value="blonde">بيان درجات</ion-select-option>
                 <ion-select-option value="black">دليل مواد</ion-select-option>
                 <ion-select-option value="red">افادة جامعية</ion-select-option>
@@ -59,12 +49,8 @@
             <ion-col size="12">
               <ion-list lines="none">
                 <ion-item class="animate__animated animate__fadeInDown">
-                  <ion-label class="label" position="floating"
-                    >ادخل اسم الجامعة</ion-label
-                  >
-                  <ion-textarea
-                    placeholder=" برجاء ادخال اسم الجامعة ... "
-                  ></ion-textarea>
+                  <ion-label class="label" position="floating">ادخل اسم الجامعة</ion-label>
+                  <ion-textarea placeholder=" برجاء ادخال اسم الجامعة ... "></ion-textarea>
                 </ion-item>
               </ion-list>
             </ion-col>
@@ -76,12 +62,8 @@
             <ion-col size="12">
               <ion-list lines="none">
                 <ion-item class="animate__animated animate__fadeInDown">
-                  <ion-label class="label" position="floating"
-                    >إدخال اسم البلد التي سيتم التوثيق لها</ion-label
-                  >
-                  <ion-textarea
-                    placeholder="برجاء كتابة اسم البلد التي سيتم التوثسق لها ..."
-                  ></ion-textarea>
+                  <ion-label class="label" position="floating">إدخال اسم البلد التي سيتم التوثيق لها</ion-label>
+                  <ion-textarea placeholder="برجاء كتابة اسم البلد التي سيتم التوثسق لها ..."></ion-textarea>
                 </ion-item>
               </ion-list>
             </ion-col>
@@ -93,12 +75,8 @@
             <ion-col size="12">
               <ion-list lines="none">
                 <ion-item class="animate__animated animate__fadeInDown">
-                  <ion-label class="label" position="floating"
-                    >إدخال اسم البلد التي سيتم التوثيق لها</ion-label
-                  >
-                  <ion-textarea
-                    placeholder="برجاء كتابة اسم البلد التي سيتم التوثسق لها ..."
-                  ></ion-textarea>
+                  <ion-label class="label" position="floating">إدخال اسم البلد التي سيتم التوثيق لها</ion-label>
+                  <ion-textarea placeholder="برجاء كتابة اسم البلد التي سيتم التوثسق لها ..."></ion-textarea>
                 </ion-item>
               </ion-list>
             </ion-col>
@@ -110,12 +88,8 @@
             <ion-col size="12">
               <ion-list lines="none">
                 <ion-item class="animate__animated animate__fadeInDown">
-                  <ion-label class="label" position="floating"
-                    >إدخال اسم البلد التي سيتم التوثيق لها</ion-label
-                  >
-                  <ion-textarea
-                    placeholder="برجاء كتابة اسم البلد التي سيتم التوثسق لها ..."
-                  ></ion-textarea>
+                  <ion-label class="label" position="floating">إدخال اسم البلد التي سيتم التوثيق لها</ion-label>
+                  <ion-textarea placeholder="برجاء كتابة اسم البلد التي سيتم التوثسق لها ..."></ion-textarea>
                 </ion-item>
               </ion-list>
             </ion-col>
@@ -126,8 +100,7 @@
       <ion-row>
         <ion-col size="12">
           <section class="animate__animated animate__fadeInDown">
-            <ion-button (click)="SendRequest()" color="danger" expand="block"
-              >اضافة الطلب
+            <ion-button (click)="SendRequest()" color="danger" expand="block">اضافة الطلب
             </ion-button>
           </section>
         </ion-col>

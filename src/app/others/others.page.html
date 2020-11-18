@@ -1,83 +1,56 @@
 <ion-header>
   <ion-toolbar color="danger">
+    <ion-buttons slot="end">
+      <ion-back-button class="rotate"></ion-back-button>
+    </ion-buttons>
     <ion-title>خدمات اخري</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <img
-    class="animate__animated animate__fadeInDown"
-    src="../../assets/icon/logo.jpeg"
-  />
+  <img class="animate__animated animate__fadeInDown" src="../../assets/icon/logo.jpeg" />
   <ion-grid>
     <form>
       <ion-row>
         <ion-col size="12">
-          <ion-item
-            style="width: 144%"
-            class="animate__animated animate__fadeInDown"
-          >
-            <ion-label class="labl" position="floating"
-              >الخدمة المطلوبة</ion-label
-            >
+          <ion-item style="width: 144%" class="animate__animated animate__fadeInDown">
+            <ion-label class="labl" position="floating">الخدمة المطلوبة</ion-label>
             <ion-input type="text"></ion-input>
           </ion-item>
         </ion-col>
 
         <ion-col size="12">
-          <ion-item
-            style="width: 144%"
-            class="animate__animated animate__fadeInDown"
-          >
-            <ion-label class="labl" position="floating"
-              >تفاصيل الخدمة المطلوبة</ion-label
-            >
+          <ion-item style="width: 144%" class="animate__animated animate__fadeInDown">
+            <ion-label class="labl" position="floating">تفاصيل الخدمة المطلوبة</ion-label>
             <ion-input type="text"></ion-input>
           </ion-item>
         </ion-col>
 
         <ion-col size="12">
-          <ion-item
-            style="width: 144%"
-            class="animate__animated animate__fadeInDown"
-          >
-            <ion-label class="labl" position="floating"
-              >الجهات التي سيتمم التعامل بها</ion-label
-            >
+          <ion-item style="width: 144%" class="animate__animated animate__fadeInDown">
+            <ion-label class="labl" position="floating">الجهات التي سيتمم التعامل بها</ion-label>
             <ion-input type="text"></ion-input>
           </ion-item>
         </ion-col>
 
         <ion-col size="12">
           <ion-item class="animate__animated animate__fadeInDown">
-            <ion-label class="lbl"
-              >هل تود إرسال المستند بعد الأنتهاء منه بالبريد السريع</ion-label
-            >
-            <ion-checkbox
-              class="chk-styling"
-              color="primary"
-              [(ngModel)]="checked"
-              name="checked"
-              slot="start"
-              (ionChange)="showaddress($event)"
-            ></ion-checkbox>
+            <ion-label class="lbl">هل تود إرسال المستند بعد الأنتهاء منه بالبريد السريع</ion-label>
+            <ion-checkbox class="chk-styling" color="primary" [(ngModel)]="checked" name="checked" slot="start"
+              (ionChange)="showaddress($event)"></ion-checkbox>
           </ion-item>
         </ion-col>
 
         <ion-col size="12" *ngIf="ShowAddress">
           <ion-item class="animate__animated animate__fadeInDown">
-            <ion-label class="labl" position="floating"
-              >اسم البلد التي تريد الارسال لها</ion-label
-            >
+            <ion-label class="labl" position="floating">اسم البلد التي تريد الارسال لها</ion-label>
             <ion-input type="text"></ion-input>
           </ion-item>
         </ion-col>
 
         <ion-col size="12">
           <section class="animate__animated animate__fadeInDown">
-            <ion-button (click)="SendRequest()" color="danger" expand="block"
-              >اضافة الطلب</ion-button
-            >
+            <ion-button (click)="SendRequest()" color="danger" expand="block">اضافة الطلب</ion-button>
           </section>
         </ion-col>
       </ion-row>

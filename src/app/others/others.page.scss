@@ -3,6 +3,9 @@
   font-weight: bold;
   margin-right: 10px;
 }
+.rotate {
+  transform: rotateY(-180deg);
+}
 
 section {
   margin-top: 1em;

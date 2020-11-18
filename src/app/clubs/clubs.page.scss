@@ -6,6 +6,10 @@ img {
   width: 115px;
 }
 
+.rotate {
+  transform: rotateY(-180deg);
+}
+
 .label {
   font-family: "system-ui";
   font-weight: bold;

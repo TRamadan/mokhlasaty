@@ -1,14 +1,14 @@
 <ion-header>
   <ion-toolbar color="danger">
+    <ion-buttons slot="end">
+      <ion-back-button class="rotate"></ion-back-button>
+    </ion-buttons>
     <ion-title>النقابات المهنية</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <img
-    src="../../assets/icon/logo.jpeg"
-    class="animate__animated animate__fadeInDown"
-  />
+  <img src="../../assets/icon/logo.jpeg" class="animate__animated animate__fadeInDown" />
   <ion-grid>
     <form>
       <ion-row>
@@ -16,25 +16,13 @@
           <ion-list lines="none">
             <ion-item class="animate__animated animate__fadeInDown">
               <ion-label class="label">نوع الخدمة</ion-label>
-              <ion-select
-                interface="popover"
-                [(ngModel)]="status"
-                name="status"
-              >
-                <ion-select-option value="blonde1"
-                  >اشتراك جديد</ion-select-option
-                >
-                <ion-select-option value="blonde2"
-                  >اثبات ممارسة</ion-select-option
-                >
-                <ion-select-option value="blonde3"
-                  >تعديل صفة القيد</ion-select-option
-                >
-                <ion-select-option value="blonde4"
-                  >اضافة عضو تابع
+              <ion-select interface="popover" [(ngModel)]="status" name="status">
+                <ion-select-option value="blonde1">اشتراك جديد</ion-select-option>
+                <ion-select-option value="blonde2">اثبات ممارسة</ion-select-option>
+                <ion-select-option value="blonde3">تعديل صفة القيد</ion-select-option>
+                <ion-select-option value="blonde4">اضافة عضو تابع
                 </ion-select-option>
-                <ion-select-option value="blonde5"
-                  >دفع اشتراكات متأخرة
+                <ion-select-option value="blonde5">دفع اشتراكات متأخرة
                 </ion-select-option>
               </ion-select>
             </ion-item>
@@ -47,14 +35,8 @@
           <ion-list lines="none">
             <ion-item class="animate__animated animate__fadeInDown">
               <ion-label class="label">الخدمة</ion-label>
-              <ion-select
-                interface="popover"
-                [(ngModel)]="status2"
-                name="status2"
-              >
-                <ion-select-option value="brown11"
-                  >اشتراك نقابة</ion-select-option
-                >
+              <ion-select interface="popover" [(ngModel)]="status2" name="status2">
+                <ion-select-option value="brown11">اشتراك نقابة</ion-select-option>
               </ion-select>
             </ion-item>
           </ion-list>
@@ -66,9 +48,7 @@
           <ion-list lines="none">
             <ion-item class="animate__animated animate__fadeInDown">
               <ion-label class="label"> برجاء رفع صورة شهادة التخرج </ion-label>
-              <ion-button color="danger" (click)="uploadimg()"
-                >رفع الصورة</ion-button
-              >
+              <ion-button color="danger" (click)="uploadimg()">رفع الصورة</ion-button>
             </ion-item>
           </ion-list>
         </div>
@@ -77,9 +57,7 @@
           <ion-list lines="none">
             <ion-item class="animate__animated animate__fadeInDown">
               <ion-label class="label"> برجاء رفع صورة شهادة الخبرة </ion-label>
-              <ion-button color="danger" (click)="uploadimg()"
-                >رفع الصورة</ion-button
-              >
+              <ion-button color="danger" (click)="uploadimg()">رفع الصورة</ion-button>
             </ion-item>
           </ion-list>
         </div>
@@ -88,9 +66,7 @@
           <ion-list lines="none">
             <ion-item class="animate__animated animate__fadeInDown">
               <ion-label class="label"> برجاء رفع صورة شهادة الخبرة </ion-label>
-              <ion-button color="danger" (click)="uploadimg()"
-                >رفع الصورة</ion-button
-              >
+              <ion-button color="danger" (click)="uploadimg()">رفع الصورة</ion-button>
             </ion-item>
           </ion-list>
         </div>
@@ -101,9 +77,7 @@
               <ion-label class="label">
                 برجاء رفع صورة شهادة الميلاد
               </ion-label>
-              <ion-button color="danger" (click)="uploadimg()"
-                >رفع الصورة</ion-button
-              >
+              <ion-button color="danger" (click)="uploadimg()">رفع الصورة</ion-button>
             </ion-item>
           </ion-list>
         </div>
@@ -112,9 +86,7 @@
           <ion-list lines="none">
             <ion-item class="animate__animated animate__fadeInDown">
               <ion-label class="label"> برجاء رفع صورة الكارنيه </ion-label>
-              <ion-button color="danger" (click)="uploadimg()"
-                >رفع الصورة</ion-button
-              >
+              <ion-button color="danger" (click)="uploadimg()">رفع الصورة</ion-button>
             </ion-item>
           </ion-list>
         </div>
@@ -123,8 +95,7 @@
       <ion-row>
         <ion-col size="12">
           <section class="animate__animated animate__fadeInDown">
-            <ion-button color="danger" (click)="senddata()" expand="block"
-              >اضافة الطلب
+            <ion-button color="danger" (click)="senddata()" expand="block">اضافة الطلب
             </ion-button>
           </section>
         </ion-col>

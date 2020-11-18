@@ -23,7 +23,7 @@ export class ShehadatPage implements OnInit {
     this.status2 = "brown";
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   async SendRequest() {
     const loader = await this.loadingController.create({
@@ -47,5 +47,5 @@ export class ShehadatPage implements OnInit {
     await alert.present();
   }
 
-  uploadimg() {}
+  uploadimg() { }
 }

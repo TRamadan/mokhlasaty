@@ -1,14 +1,14 @@
 <ion-header>
   <ion-toolbar color="danger">
+    <ion-buttons slot="end">
+      <ion-back-button class="rotate"></ion-back-button>
+    </ion-buttons>
     <ion-title>الأحوال المدنية</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <img
-    src="../../assets/icon/logo.jpeg"
-    class="animate__animated animate__fadeInDown"
-  />
+  <img src="../../assets/icon/logo.jpeg" class="animate__animated animate__fadeInDown" />
   <ion-grid>
     <form>
       <ion-row>
@@ -16,20 +16,10 @@
           <ion-list lines="none">
             <ion-item class="animate__animated animate__fadeInDown">
               <ion-label class="label">نوع الخدمة</ion-label>
-              <ion-select
-                interface="popover"
-                [(ngModel)]="status"
-                name="status"
-              >
-                <ion-select-option value="blonde1"
-                  >استخراج نسخة</ion-select-option
-                >
-                <ion-select-option value="brown"
-                  >توثيق السفارة</ion-select-option
-                >
-                <ion-select-option value="black"
-                  >شحن خارج مصر</ion-select-option
-                >
+              <ion-select interface="popover" [(ngModel)]="status" name="status">
+                <ion-select-option value="blonde1">استخراج نسخة</ion-select-option>
+                <ion-select-option value="brown">توثيق السفارة</ion-select-option>
+                <ion-select-option value="black">شحن خارج مصر</ion-select-option>
               </ion-select>
             </ion-item>
           </ion-list>
@@ -41,20 +31,10 @@
           <ion-list lines="none">
             <ion-item class="animate__animated animate__fadeInDown">
               <ion-label class="label">الخدمة</ion-label>
-              <ion-select
-                interface="popover"
-                [(ngModel)]="status2"
-                name="status2"
-              >
-                <ion-select-option value="brown"
-                  >شهادة ميلاد مميكنة</ion-select-option
-                >
-                <ion-select-option value="blonde"
-                  >شهادة زواج مميكنة</ion-select-option
-                >
-                <ion-select-option value="black"
-                  >شهادة طلاق مميكنة</ion-select-option
-                >
+              <ion-select interface="popover" [(ngModel)]="status2" name="status2">
+                <ion-select-option value="brown">شهادة ميلاد مميكنة</ion-select-option>
+                <ion-select-option value="blonde">شهادة زواج مميكنة</ion-select-option>
+                <ion-select-option value="black">شهادة طلاق مميكنة</ion-select-option>
                 <ion-select-option value="red">قيد عائلي</ion-select-option>
               </ion-select>
             </ion-item>
@@ -67,9 +47,7 @@
           <ion-list lines="none">
             <ion-item class="animate__animated animate__fadeInDown">
               <ion-label class="label"> برجاء رفع النسخة الأصلية </ion-label>
-              <ion-button color="danger" (click)="uploadimg()"
-                >رفع الصورة</ion-button
-              >
+              <ion-button color="danger" (click)="uploadimg()">رفع الصورة</ion-button>
             </ion-item>
           </ion-list>
         </div>
@@ -79,12 +57,8 @@
             <ion-col size="12">
               <ion-list lines="none">
                 <ion-item class="animate__animated animate__fadeInDown">
-                  <ion-label class="label" position="floating"
-                    >إدخال اسم البلد التي سيتم التوثيق لها</ion-label
-                  >
-                  <ion-textarea
-                    placeholder="برجاء كتابة اسم البلد التي سيتم التوثسق لها ..."
-                  ></ion-textarea>
+                  <ion-label class="label" position="floating">إدخال اسم البلد التي سيتم التوثيق لها</ion-label>
+                  <ion-textarea placeholder="برجاء كتابة اسم البلد التي سيتم التوثسق لها ..."></ion-textarea>
                 </ion-item>
               </ion-list>
             </ion-col>
@@ -96,12 +70,9 @@
             <ion-col size="12">
               <ion-list lines="none">
                 <ion-item class="animate__animated animate__fadeInDown">
-                  <ion-label class="label" position="floating"
-                    >ادخال العنوان الذي سيتم الارسال له
+                  <ion-label class="label" position="floating">ادخال العنوان الذي سيتم الارسال له
                   </ion-label>
-                  <ion-textarea
-                    placeholder="برجاء كتابة ادخال العنوان ..."
-                  ></ion-textarea>
+                  <ion-textarea placeholder="برجاء كتابة ادخال العنوان ..."></ion-textarea>
                 </ion-item>
               </ion-list>
             </ion-col>
@@ -112,8 +83,7 @@
       <ion-row>
         <ion-col size="12">
           <section class="animate__animated animate__fadeInDown">
-            <ion-button color="danger" (click)="senddata()" expand="block"
-              >اضافة الطلب
+            <ion-button color="danger" (click)="senddata()" expand="block">اضافة الطلب
             </ion-button>
           </section>
         </ion-col>
