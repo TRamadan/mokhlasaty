@@ -1,12 +1,12 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
-import { IonicModule } from '@ionic/angular';
+import { IonicModule } from "@ionic/angular";
 
-import { ShehadatPageRoutingModule } from './shehadat-routing.module';
+import { ShehadatPageRoutingModule } from "./shehadat-routing.module";
 
-import { ShehadatPage } from './shehadat.page';
+import { ShehadatPage } from "./shehadat.page";
 
 @NgModule({
   imports: [
@@ -14,8 +14,8 @@ import { ShehadatPage } from './shehadat.page';
     FormsModule,
     ReactiveFormsModule,
     IonicModule,
-    ShehadatPageRoutingModule
+    ShehadatPageRoutingModule,
   ],
-  declarations: [ShehadatPage]
+  declarations: [ShehadatPage],
 })
-export class ShehadatPageModule { }
+export class ShehadatPageModule {}

@@ -1,0 +1,22 @@
+img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 15px;
+  width: 115px;
+}
+
+.label {
+  font-family: "system-ui";
+  font-weight: bold;
+}
+
+section {
+  margin-top: 1em;
+  margin-bottom: 2.5em;
+}
+
+section:not(.full-width),
+.full-width > header {
+  padding: 0 10px;
+}

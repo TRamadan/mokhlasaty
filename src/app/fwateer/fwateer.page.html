@@ -1,9 +1,100 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>fwateer</ion-title>
+  <ion-toolbar color="danger">
+    <ion-title>فواتير المرافق العامة</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <img
+    src="../../assets/icon/logo.jpeg"
+    class="animate__animated animate__fadeInDown"
+  />
+  <ion-grid>
+    <form>
+      <ion-row>
+        <ion-col size="12">
+          <ion-list lines="none">
+            <ion-item class="animate__animated animate__fadeInDown">
+              <ion-label class="label">نوع الخدمة</ion-label>
+              <ion-select
+                interface="popover"
+                [(ngModel)]="status"
+                name="status"
+              >
+                <ion-select-option value="blonde1"
+                  >دفع متأخرات</ion-select-option
+                >
+                <ion-select-option value="blonde2"
+                  >تعديل الخدمات</ion-select-option
+                >
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
 
+      <ion-row>
+        <ion-col size="12">
+          <ion-list lines="none">
+            <ion-item class="animate__animated animate__fadeInDown">
+              <ion-label class="label">الخدمة</ion-label>
+              <ion-select
+                interface="popover"
+                [(ngModel)]="status2"
+                name="status2"
+              >
+                <ion-select-option value="brown11">كهرباء</ion-select-option>
+
+                <ion-select-option value="brown12">مياه</ion-select-option>
+
+                <ion-select-option value="brown13">غاز</ion-select-option>
+
+                <ion-select-option value="brown14">تيليفون</ion-select-option>
+
+                <ion-select-option value="brown15">داتا</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <div [ngSwitch]="status">
+        <div *ngSwitchCase="'blonde1'">
+          <ion-list lines="none">
+            <ion-item class="animate__animated animate__fadeInDown">
+              <ion-label class="label2">
+                برجاء رفع صورة من فاتورة سابقة
+              </ion-label>
+              <ion-button color="danger" (click)="uploadimg()"
+                >رفع الصورة</ion-button
+              >
+            </ion-item>
+          </ion-list>
+        </div>
+
+        <div *ngSwitchCase="'blonde2'">
+          <ion-list lines="none">
+            <ion-item class="animate__animated animate__fadeInDown">
+              <ion-label class="label2">
+                برجاء رفع صورة من عقد الإشتراك الأساسي
+              </ion-label>
+              <ion-button color="danger" (click)="uploadimg()"
+                >رفع الصورة</ion-button
+              >
+            </ion-item>
+          </ion-list>
+        </div>
+      </div>
+
+      <ion-row>
+        <ion-col size="12">
+          <section class="animate__animated animate__fadeInDown">
+            <ion-button color="danger" (click)="senddata()" expand="block"
+              >اضافة الطلب
+            </ion-button>
+          </section>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-grid>
 </ion-content>

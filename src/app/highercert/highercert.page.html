@@ -5,5 +5,144 @@
 </ion-header>
 
 <ion-content>
-  <ion-grid> </ion-grid>
+  <img
+    src="../../assets/icon/logo.jpeg"
+    class="animate__animated animate__fadeInDown"
+  />
+  <ion-grid>
+    <form>
+      <ion-row>
+        <ion-col size="12">
+          <ion-list lines="none">
+            <ion-item class="animate__animated animate__fadeInDown">
+              <ion-label class="label">نوع الخدمة</ion-label>
+              <ion-select
+                interface="popover"
+                [(ngModel)]="status"
+                name="status"
+              >
+                <ion-select-option value="blonde1"
+                  >استخراج نسخة</ion-select-option
+                >
+                <ion-select-option value="blonde2"
+                  >اثبات نظام بالجامعة</ion-select-option
+                >
+                <ion-select-option value="blonde3"
+                  >توثيق السفارة</ion-select-option
+                >
+                <ion-select-option value="blonde4"
+                  >شحن خارج مصر</ion-select-option
+                >
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-list lines="none">
+            <ion-item class="animate__animated animate__fadeInDown">
+              <ion-label class="label">الخدمة</ion-label>
+              <ion-select
+                interface="popover"
+                [(ngModel)]="status2"
+                name="status2"
+              >
+                <ion-select-option value="brown11"
+                  >شهادة دبلوم</ion-select-option
+                >
+                <ion-select-option value="brown12"
+                  >شهادة ماجستير</ion-select-option
+                >
+                <ion-select-option value="brown13"
+                  >بيان مواد الماجستير</ion-select-option
+                >
+                <ion-select-option value="brown14"
+                  >شهادة الدكتوراة</ion-select-option
+                >
+                <ion-select-option value="brown15"
+                  >بيان مواد الدكتوراة</ion-select-option
+                >
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <div [ngSwitch]="status">
+        <div *ngSwitchCase="'blonde1'">
+          <ion-row>
+            <ion-col size="12">
+              <ion-list lines="none">
+                <ion-item class="animate__animated animate__fadeInDown">
+                  <ion-label class="label" position="floating"
+                    >ادخل اسم الجامعة
+                  </ion-label>
+                  <ion-textarea
+                    placeholder="برجاء ادخال اسم الجامعة ..."
+                  ></ion-textarea>
+                </ion-item>
+              </ion-list>
+            </ion-col>
+          </ion-row>
+        </div>
+
+        <div *ngSwitchCase="'blonde2'">
+          <ion-list lines="none">
+            <ion-item class="animate__animated animate__fadeInDown">
+              <ion-label class="label"> برجاء رفع صورة الكارنيه </ion-label>
+              <ion-button color="danger" (click)="uploadimg()"
+                >رفع الصورة</ion-button
+              >
+            </ion-item>
+          </ion-list>
+        </div>
+
+        <div *ngSwitchCase="'blonde3'">
+          <ion-row>
+            <ion-col size="12">
+              <ion-list lines="none">
+                <ion-item class="animate__animated animate__fadeInDown">
+                  <ion-label class="label" position="floating"
+                    >إدخال اسم البلد التي سيتم التوثيق لها</ion-label
+                  >
+                  <ion-textarea
+                    placeholder="برجاء كتابة اسم البلد التي سيتم التوثيق لها ..."
+                  ></ion-textarea>
+                </ion-item>
+              </ion-list>
+            </ion-col>
+          </ion-row>
+        </div>
+
+        <div *ngSwitchCase="'blonde4'">
+          <ion-row>
+            <ion-col size="12">
+              <ion-list lines="none">
+                <ion-item class="animate__animated animate__fadeInDown">
+                  <ion-label class="label" position="floating"
+                    >إدخال العنوان الذي سيتم الإرسال له
+                  </ion-label>
+                  <ion-textarea
+                    placeholder="برجاء العنوان الذي سيتم الإرسال له ..."
+                  ></ion-textarea>
+                </ion-item>
+              </ion-list>
+            </ion-col>
+          </ion-row>
+        </div>
+      </div>
+
+      <ion-row>
+        <ion-col size="12">
+          <section class="animate__animated animate__fadeInDown">
+            <ion-button color="danger" (click)="senddata()" expand="block"
+              >اضافة الطلب
+            </ion-button>
+          </section>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-grid>
 </ion-content>
